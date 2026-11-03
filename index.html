@@ -1,5 +1,3 @@
-# trajets-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,153 +10,39 @@
 body{margin:0;background:#101827;color:#f4f6fb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:22px}
 header{display:flex;align-items:center;gap:12px;margin:10px 0 25px}
 .logo{background:#dff7e7;color:#147a43;border-radius:15px;padding:10px;font-size:25px}
-h1{font-size:28px;margin:0}
-.sub{color:#aab5c8;font-size:14px}
+h1{font-size:28px;margin:0}.sub{color:#aab5c8;font-size:14px}
 .card{background:#1b2638;border:1px solid #34435a;border-radius:18px;padding:18px;margin:15px 0}
-h2{font-size:18px;margin:0 0 14px}
-.big{font-size:34px;font-weight:750}
-.muted{color:#aab5c8}
+h2{font-size:18px;margin:0 0 14px}.big{font-size:34px;font-weight:750}.muted{color:#aab5c8}
 .route{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.line{font-size:25px;font-weight:800}
-.pill{background:#293951;border-radius:20px;padding:7px 12px;font-size:13px}
+.line{font-size:25px;font-weight:800}.pill{background:#293951;border-radius:20px;padding:7px 12px;font-size:13px}
 button{border:0;border-radius:13px;padding:14px 16px;font-size:16px;font-weight:700;background:#55d68b;color:#10251a;width:100%;margin-top:10px}
 button.secondary{background:#34435a;color:white}
-button:active{opacity:.7}
 input{background:#101827;border:1px solid #46556b;color:white;border-radius:10px;padding:12px;width:100%;font-size:16px;margin:7px 0 12px}
-label{font-size:13px;color:#b9c4d5}
-.status{display:inline-block;border-radius:20px;background:#3b2e19;color:#ffd27a;padding:7px 11px;font-size:13px}
-small{color:#9eacc0;line-height:1.5}
-ul{padding-left:20px;color:#d9e2f0;line-height:1.9}
-footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
+label{font-size:13px;color:#b9c4d5}.status{display:inline-block;border-radius:20px;background:#3b2e19;color:#ffd27a;padding:7px 11px;font-size:13px}
+ul{padding-left:20px;color:#d9e2f0;line-height:1.9}footer{text-align:center;color:#8290a5;font-size:12px;margin:25px 0}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">🚌</div>
-<div><h1>Trajets</h1><div class="sub">Mon trajet quotidien</div></div>
-</header>
-
-<div class="card">
-<div class="muted">MON OBJECTIF</div>
-<div class="big">09:30</div>
-<div>Arrivée chez Manda</div>
-<div class="sub">30 Terrasse Bellini · Puteaux</div>
-</div>
-
-<div class="card">
-<h2>🚏 Mon départ</h2>
-<div class="route"><div><div class="line">306</div><div class="muted">Vers Saint-Maur–Créteil</div></div><span class="pill">Option 1</span></div>
-<hr style="border-color:#34435a;margin:17px 0">
-<div class="route"><div><div class="line">112</div><div class="muted">Vers Joinville-le-Pont</div></div><span class="pill">Option 2</span></div>
-<p class="muted">Arrêt de départ : Maurice Berteaux</p>
-</div>
-
-<div class="card">
-<h2>⏰ Ma surveillance</h2>
-<div class="route"><div><span class="muted">Début</span><br><b>08:10</b></div><div><span class="muted">Fin</span><br><b>08:40</b></div><div><span class="muted">Fréquence</span><br><b>1 minute</b></div></div>
-<p><span class="status" id="state">Surveillance non démarrée</span></p>
-<button onclick="startMonitoring()">Activer mes rappels</button>
-<button class="secondary" onclick="stopMonitoring()">Arrêter les rappels</button>
-<p class="muted" id="message">Les rappels fonctionnent lorsque cette page reste ouverte.</p>
-</div>
-
-<div class="card">
-<h2>🔔 Mes rappels</h2>
-<ul>
-<li>15 minutes avant le départ : prépare-toi.</li>
-<li>10 minutes avant le départ : pars de chez toi.</li>
-<li>5 minutes de marche jusqu'à l'arrêt.</li>
-</ul>
-<label>Heure de départ à surveiller (à régler selon l'horaire réel)</label>
-<input id="departure" type="time" value="08:30">
-<button class="secondary" onclick="saveDeparture()">Enregistrer l'heure</button>
-</div>
-
-<div class="card">
-<h2>🚆 Mon itinéraire</h2>
-<ul>
-<li>Maurice Berteaux → bus 306 ou 112.</li>
-<li>RER A depuis Saint-Maur–Créteil ou Joinville-le-Pont.</li>
-<li>Direction La Défense.</li>
-<li>Métro 1 → Esplanade de La Défense.</li>
-<li>Marche jusqu'à Manda, Terrasse Bellini.</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>⚙️ Mes réglages</h2>
-<label>Jours de trajet</label>
-<p>Lundi · Mardi · Mercredi · Jeudi · Vendredi</p>
-<label>Heure de réveil</label>
-<p>08:00</p>
-</div>
-
+<header><div class="logo">🚌</div><div><h1>Trajets</h1><div class="sub">Mon trajet quotidien</div></div></header>
+<div class="card"><div class="muted">MON OBJECTIF</div><div class="big">09:30</div><div>Arrivée chez Manda</div><div class="sub">30 Terrasse Bellini · Puteaux</div></div>
+<div class="card"><h2>🚏 Mon départ</h2>
+<div class="route"><div><div class="line">306</div><div class="muted">Vers Saint-Maur–Créteil</div></div><span class="pill">Option 1</span></div><hr style="border-color:#34435a;margin:17px 0">
+<div class="route"><div><div class="line">112</div><div class="muted">Vers Joinville-le-Pont</div></div><span class="pill">Option 2</span></div><p class="muted">Arrêt de départ : Maurice Berteaux</p></div>
+<div class="card"><h2>⏰ Mes rappels locaux</h2><div class="route"><div><span class="muted">Début</span><br><b>08:10</b></div><div><span class="muted">Fin</span><br><b>08:40</b></div><div><span class="muted">Fréquence</span><br><b>1 minute</b></div></div>
+<p><span class="status" id="state">Rappels désactivés</span></p><button onclick="startMonitoring()">Autoriser les notifications</button><button class="secondary" onclick="stopMonitoring()">Arrêter les rappels</button><p class="muted" id="message">Rappels locaux uniquement : cette page doit rester ouverte. Aucun horaire de bus en temps réel n'est connecté.</p></div>
+<div class="card"><h2>🔔 Rappels de départ</h2><ul><li>15 minutes avant l'heure choisie : prépare-toi.</li><li>10 minutes avant : pars de chez toi.</li><li>5 minutes de marche jusqu'à l'arrêt.</li></ul>
+<label>Heure du bus (à vérifier sur les horaires officiels)</label><input id="departure" type="time" value="08:30"><button class="secondary" onclick="saveDeparture()">Enregistrer l'heure</button></div>
+<div class="card"><h2>🚆 Mon itinéraire</h2><ul><li>Maurice Berteaux → bus 306 ou 112.</li><li>RER A depuis Saint-Maur–Créteil ou Joinville-le-Pont.</li><li>Direction La Défense.</li><li>Métro 1 → Esplanade de La Défense.</li><li>Marche jusqu'à Manda, 30 Terrasse Bellini.</li></ul></div>
+<div class="card"><h2>⚙️ Mes réglages</h2><label>Jours de trajet</label><p>Lundi · Mardi · Mercredi · Jeudi · Vendredi</p><label>Réveil</label><p>08:00</p></div>
 <footer>Trajets · Application personnelle</footer>
-
 <script>
-let timer=null;
-let notified={};
+let timer=null,notified={};
 let departure=localStorage.getItem("trajetsDeparture")||"08:30";
 document.getElementById("departure").value=departure;
-
-function saveDeparture(){
- departure=document.getElementById("departure").value;
- localStorage.setItem("trajetsDeparture",departure);
- document.getElementById("message").textContent="Départ enregistré : "+departure;
-}
-
-function notify(title,body){
- if("Notification" in window && Notification.permission==="granted"){
-   new Notification(title,{body:body});
- }else{
-   document.getElementById("message").textContent=title+" — "+body;
- }
-}
-
-function checkTime(){
- const now=new Date();
- const day=now.getDay();
- const current=now.getHours()*60+now.getMinutes();
- const start=8*60+10,end=8*60+40;
- if(day===0||day===6||current<start||current>end)return;
- const parts=departure.split(":").map(Number);
- const bus=parts[0]*60+parts[1];
- const diff=bus-current;
- const key=now.toDateString()+"-"+departure;
- if(diff===15&&!notified[key+"-15"]){
-  notify("Trajets : prépare-toi","Ton bus est prévu dans 15 minutes.");
-  notified[key+"-15"]=true;
- }
- if(diff===10&&!notified[key+"-10"]){
-  notify("Trajets : il est temps de partir","5 minutes de marche jusqu'à Maurice Berteaux.");
-  notified[key+"-10"]=true;
- }
- document.getElementById("state").textContent="Rappels activés · "+now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
-}
-
-async function startMonitoring(){
- if(!("Notification" in window)){
-  alert("Les notifications ne sont pas disponibles dans ce navigateur.");
-  return;
- }
- const permission=await Notification.requestPermission();
- if(permission!=="granted"){
-  alert("Autorise les notifications pour recevoir tes rappels.");
-  return;
- }
- if(timer)clearInterval(timer);
- notified={};
- checkTime();
- timer=setInterval(checkTime,60000);
- document.getElementById("message").textContent="Rappels activés. Garde cette page ouverte.";
-}
-
-function stopMonitoring(){
- if(timer)clearInterval(timer);
- timer=null;
- document.getElementById("state").textContent="Surveillance arrêtée";
- document.getElementById("message").textContent="Les rappels sont arrêtés.";
-}
+function saveDeparture(){departure=document.getElementById("departure").value;localStorage.setItem("trajetsDeparture",departure);document.getElementById("message").textContent="Heure enregistrée : "+departure;}
+function notify(title,body){if("Notification"in window&&Notification.permission==="granted"){new Notification(title,{body});}else{document.getElementById("message").textContent=title+" — "+body;}}
+function checkTime(){const now=new Date(),day=now.getDay(),current=now.getHours()*60+now.getMinutes();if(day===0||day===6||current<490||current>520)return;const p=departure.split(":").map(Number),bus=p[0]*60+p[1],diff=bus-current,key=now.toDateString()+"-"+departure;if(diff===15&&!notified[key+"-15"]){notify("Trajets : prépare-toi","Ton bus est prévu dans 15 minutes.");notified[key+"-15"]=true;}if(diff===10&&!notified[key+"-10"]){notify("Trajets : pars de chez toi","Ton bus est prévu dans 10 minutes.");notified[key+"-10"]=true;}document.getElementById("state").textContent="Rappels actifs · "+now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});}
+async function startMonitoring(){if(!("Notification"in window)){alert("Notifications non disponibles dans ce navigateur.");return;}const p=await Notification.requestPermission();if(p!=="granted"){alert("Autorise les notifications dans Safari.");return;}if(timer)clearInterval(timer);notified={};checkTime();timer=setInterval(checkTime,60000);document.getElementById("message").textContent="Rappels locaux actifs. Garde la page ouverte; ils s'arrêtent si Safari ferme la page.";}
+function stopMonitoring(){if(timer)clearInterval(timer);timer=null;document.getElementById("state").textContent="Rappels arrêtés";document.getElementById("message").textContent="Rappels désactivés.";}
 </script>
-</body>
-</html>
+</body></html>
